@@ -1,5 +1,7 @@
 # Salt API
 
+[![Publish](https://github.com/Nexysweb/salt-headless/actions/workflows/publish.yml/badge.svg)](https://github.com/Nexysweb/salt-headless/actions/workflows/publish.yml)
+
 Retrieve account infomration via headless browser Headless
 
 ## Usage
