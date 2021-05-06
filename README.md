@@ -1,6 +1,6 @@
 # Salt API
 
-[![npm version](https://img.shields.io/npm/v/@nexys/salt-headless.svg)](https://www.npmjs.com/package/@nexys/salt-headless)
+[![npm version](https://img.shields.io/npm/v/salt-headless.svg)](https://www.npmjs.com/package/salt-headless)
 [![Publish](https://github.com/Nexysweb/salt-headless/actions/workflows/publish.yml/badge.svg)](https://github.com/Nexysweb/salt-headless/actions/workflows/publish.yml)
 
 Retrieve account infomration via headless browser Headless
