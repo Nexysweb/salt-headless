@@ -1,10 +1,19 @@
 import puppeteer from "puppeteer";
 
+interface SaltUsage {
+  phone: string;
+  owner: string;
+  subscription: string;
+  user: string;
+  balance: string;
+  balanceNumber: number;
+}
+
 export const main = async (
   username: string,
   password: string,
   withScreenshot: boolean = false
-) => {
+): Promise<SaltUsage> => {
   const makeScreenshot = async (idx: string) => {
     if (withScreenshot) {
       await page.screenshot({ path: "./out/t" + idx + ".png" });
@@ -67,9 +76,11 @@ export const main = async (
     throw Error("could not find element");
   }
   const text = await page.evaluate((element) => element.textContent, el1);
+  const out = parseOut(text);
 
-  console.log(parseOut(text));
   await browser.close();
+
+  return out;
 };
 
 const parseOut = (text: string) => {
@@ -81,6 +92,9 @@ const parseOut = (text: string) => {
   const owner = aText[8].trim();
   const user = aText[10].trim();
   const balance = aText[14].trim();
+  const balanceNumber = Number(
+    balance.replace("Balance", "").replace("CHF", "").trim()
+  );
 
-  return { phone, owner, subscription, user, balance };
+  return { phone, owner, subscription, user, balance, balanceNumber };
 };

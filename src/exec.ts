@@ -11,4 +11,7 @@ if (!password) {
   throw Error("password must be given in env var");
 }
 
-Main.main(username, password);
+Main.main(username, password).then((out) => {
+  console.log(out);
+  console.log("out");
+});
