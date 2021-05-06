@@ -7,7 +7,14 @@ Retrieve account infomration via headless browser Headless
 
 ## Usage
 
-USERNAME=myusername PASSWORD=mypassword node dist/exec.js
+`USERNAME=myusername PASSWORD=mypassword node dist/exec.js`
+
+## install and run
+
+```
+yarn
+yarn build
+```
 
 ## Under the hood
 
