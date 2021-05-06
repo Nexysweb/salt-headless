@@ -11,4 +11,4 @@ if (!password) {
   throw Error("password must be given in env var");
 }
 
-Main.main(username, password, false);
+Main.main(username, password);
