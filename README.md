@@ -18,7 +18,7 @@ yarn build
 
 ## Under the hood
 
-Puppeteer mimicks the behavior of a webbrowser. See differetn steps below
+Puppeteer mimicks the behavior of a webbrowser. See different steps below
 
 ![](./assets-readme/t0.png)
 ![](./assets-readme/t1.png)
